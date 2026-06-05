@@ -1,0 +1,51 @@
+#version: "3.9"
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: petclinic-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_USER: petclinic
+      MYSQL_PASSWORD: petclinic
+      MYSQL_DATABASE: petclinic
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql_conf:/etc/mysql/conf.d:ro
+    networks:
+      - petclinic-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  petclinic:
+    image: petclinic-app
+    build: .
+    container_name: petclinic-app
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/petclinic
+      SPRING_DATASOURCE_USERNAME: petclinic
+      SPRING_DATASOURCE_PASSWORD: petclinic
+    volumes:
+      - ./data_logs_app:/app/logs
+    networks:
+      - petclinic-network
+
+volumes:
+  mysql_data:
+
+networks:
+  petclinic-network:
+    driver: bridge
+

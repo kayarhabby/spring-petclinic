@@ -1,0 +1,18 @@
+#  postgres:
+#    image: postgres:14.1
+#    container_name: petclinic-postgres
+#    ports:
+#      - "5432:5432"
+#    environment:
+#      POSTGRES_PASSWORD: petclinic
+#      POSTGRES_USER: petclinic
+#      POSTGRES_DB: petclinic
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+#    networks:
+#      - petclinic-network
+#    healthcheck:
+#      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5

@@ -1,0 +1,5 @@
+[phases.build]
+cmds = ["mvn clean package -DskipTests -Dspring.profiles.active=mysql -Dspring-javaformat.skip=true -Dcheckstyle.skip=true"]
+
+[start]
+cmd = "java -jar target/*.jar"

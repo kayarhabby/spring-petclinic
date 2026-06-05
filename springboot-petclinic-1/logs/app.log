@@ -1,0 +1,1250 @@
+2026-06-05 10:04:50 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] Starting PetClinicApplication using Java 21.0.11 with PID 11323 (/home/lab/lab-at-octo/petclinic-app-workspace/springboot-petclinic/target/classes started by lab in /home/lab/lab-at-octo/petclinic-app-workspace/springboot-petclinic)
+2026-06-05 10:04:50 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2026-06-05 10:04:50 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-05 10:04:50 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-05 10:04:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 10:04:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2026-06-05 10:04:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2026-06-05 10:04:51 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1530 ms
+2026-06-05 10:04:52 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:438dc807-a140-4132-9ef8-86ef26d37c15'
+2026-06-05 10:04:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 10:04:54 INFO  o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2026-06-05 10:04:54 INFO  o.s.b.a.e.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2026-06-05 10:04:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2026-06-05 10:04:54 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] Started PetClinicApplication in 4.52 seconds (process running for 5.02)
+2026-06-05 10:05:49 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2026-06-05 10:05:49 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2026-06-05 10:19:44 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-114] [THYMELEAF][http-nio-8080-exec-114] Exception processing template "owners/ownersList": Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-140] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-162] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-36] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-80] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-45] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-199] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-62] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-26] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-46] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-187] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-125] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-152] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-32] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-124] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-16] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-1] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-44] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-177] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-117] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-53] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-113] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-195] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-88] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-157] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-87] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-173] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-2] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-155] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-163] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-174] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-24] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-126] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-43] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-189] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-159] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-10] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-91] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-98] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-194] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-151] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-76] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-49] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-141] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-39] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-58] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-7] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-74] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-96] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-148] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-102] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-41] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-31] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-109] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-158] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-61] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-77] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-73] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-119] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-128] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-19] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-99] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-11] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-165] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-121] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-71] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-115] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-136] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-81] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-30] [THYMELEAF][http-nio-8080-exec-30] Exception processing template "owners/ownersList": Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-65] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-107] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-183] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-132] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-150] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-47] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-68] [THYMELEAF][http-nio-8080-exec-68] Exception processing template "owners/ownersList": Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-106] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-116] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-105] [THYMELEAF][http-nio-8080-exec-105] Exception processing template "owners/ownersList": Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-197] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-172] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-198] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-20] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-135] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-82] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-15] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-129] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-139] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-110] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-191] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-147] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-56] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-166] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:19:44 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-101] [THYMELEAF][http-nio-8080-exec-101] Exception processing template "pets/createOrUpdateVisitForm": Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:19:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 10:19:44 WARN  o.s.b.f.s.DisposableBeanAdapter [SpringApplicationShutdownHook] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2026-06-05 10:23:20 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] Starting PetClinicApplication using Java 21.0.11 with PID 13908 (/home/lab/lab-at-octo/petclinic-app-workspace/springboot-petclinic/target/classes started by lab in /home/lab/lab-at-octo/petclinic-app-workspace/springboot-petclinic)
+2026-06-05 10:23:20 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2026-06-05 10:23:20 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-05 10:23:20 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-05 10:23:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 10:23:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2026-06-05 10:23:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2026-06-05 10:23:22 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1400 ms
+2026-06-05 10:23:22 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:892c8a65-1b5d-4504-b8f3-74023a277f16'
+2026-06-05 10:23:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 10:23:24 INFO  o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2026-06-05 10:23:24 INFO  o.s.b.a.e.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2026-06-05 10:23:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2026-06-05 10:23:24 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] Started PetClinicApplication in 4.123 seconds (process running for 4.544)
+2026-06-05 10:23:38 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-4] Initializing Servlet 'dispatcherServlet'
+2026-06-05 10:23:38 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-4] Completed initialization in 1 ms
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-13] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-68] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-83] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-87] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-42] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-145] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-173] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-34] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-125] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-80] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-49] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-92] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-98] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-91] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-38] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-33] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-10] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-123] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-45] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-3] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-47] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-62] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-179] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-196] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-158] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-105] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-187] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-36] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-159] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-50] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-119] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-178] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-162] [THYMELEAF][http-nio-8080-exec-162] Exception processing template "pets/createOrUpdateVisitForm": Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:30:45 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-8] [THYMELEAF][http-nio-8080-exec-8] Exception processing template "pets/createOrUpdatePetForm": Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdatePetForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdatePetForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-20] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-77] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-99] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-171] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-57] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-19] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-35] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-160] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-200] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-135] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-142] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-107] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-31] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-76] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-115] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-69] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-180] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-108] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-146] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-30] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-193] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-25] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-74] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-168] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-165] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-198] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-127] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-73] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-199] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-117] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-59] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-2] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-54] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-23] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-121] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-144] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-186] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-95] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-5] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-197] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-153] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-104] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-151] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-118] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-82] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-44] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-169] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-48] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-138] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-60] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-26] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-86] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-71] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-129] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-17] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-182] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-137] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-191] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-9] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-175] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-67] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-12] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-6] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-1] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-166] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-88] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-65] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-143] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-112] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-72] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-58] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-101] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-164] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-70] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-66] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-176] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-102] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-28] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-136] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-84] HikariPool-1 - Interrupted during connection acquisition
+2026-06-05 10:30:46 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-22] [THYMELEAF][http-nio-8080-exec-22] Exception processing template "pets/createOrUpdateVisitForm": Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:30:46 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-120] [THYMELEAF][http-nio-8080-exec-120] Exception processing template "pets/createOrUpdateVisitForm": Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdateVisitForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:30:46 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-122] [THYMELEAF][http-nio-8080-exec-122] Exception processing template "owners/ownersList": Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/owners/ownersList.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:30:46 ERROR org.thymeleaf.TemplateEngine [http-nio-8080-exec-11] [THYMELEAF][http-nio-8080-exec-11] Exception processing template "pets/createOrUpdatePetForm": Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdatePetForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [templates/pets/createOrUpdatePetForm.html]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:178)
+	at org.springframework.core.io.ClassPathResource.exists(ClassPathResource.java:152)
+	at org.thymeleaf.spring6.templateresource.SpringResourceTemplateResource.exists(SpringResourceTemplateResource.java:97)
+	at org.thymeleaf.templateresolver.AbstractTemplateResolver.resolveTemplate(AbstractTemplateResolver.java:361)
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:845)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:30:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 10:30:46 WARN  o.s.b.f.s.DisposableBeanAdapter [SpringApplicationShutdownHook] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2026-06-05 10:35:20 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] Starting PetClinicApplication using Java 21.0.11 with PID 15690 (/home/lab/lab-at-octo/petclinic-app-workspace/springboot-petclinic/target/classes started by lab in /home/lab/lab-at-octo/petclinic-app-workspace/springboot-petclinic)
+2026-06-05 10:35:20 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2026-06-05 10:35:20 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-05 10:35:20 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-05 10:35:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05 10:35:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2026-06-05 10:35:21 INFO  o.s.b.w.e.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2026-06-05 10:35:21 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1373 ms
+2026-06-05 10:35:21 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:d055d279-4ef3-4397-aff6-79b6478f4ee3'
+2026-06-05 10:35:22 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 10:35:23 INFO  o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2026-06-05 10:35:23 INFO  o.s.b.a.e.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2026-06-05 10:35:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2026-06-05 10:35:23 INFO  o.s.s.petclinic.PetClinicApplication [restartedMain] Started PetClinicApplication in 4.077 seconds (process running for 4.632)
+2026-06-05 10:35:45 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-4] Initializing Servlet 'dispatcherServlet'
+2026-06-05 10:35:45 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-4] Completed initialization in 1 ms
+2026-06-05 10:45:57 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-75] HikariPool-1 - Connection is not available, request timed out after 30000ms.
+2026-06-05 10:45:57 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-75] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction] with root cause
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:107)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:137)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:152)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:134)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy4/jdk.proxy4.$Proxy145.findById(Unknown Source)
+	at org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.method.annotation.ModelFactory.invokeModelAttributeMethods(ModelFactory.java:143)
+	at org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:112)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:861)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:46:42 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-174] HikariPool-1 - Connection is not available, request timed out after 30000ms.
+2026-06-05 10:46:42 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-174] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction] with root cause
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:107)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:137)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:152)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:134)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy4/jdk.proxy4.$Proxy145.findById(Unknown Source)
+	at org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.method.annotation.ModelFactory.invokeModelAttributeMethods(ModelFactory.java:143)
+	at org.springframework.web.method.annotation.ModelFactory.initModel(ModelFactory.java:112)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:861)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:895)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:48:16 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-75] HikariPool-1 - Connection is not available, request timed out after 30000ms.
+2026-06-05 10:48:16 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-75] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction] with root cause
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:107)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:137)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:267)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:275)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:246)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy4/jdk.proxy4.$Proxy145.save(Unknown Source)
+	at org.springframework.samples.petclinic.owner.OwnerController.processCreationForm(OwnerController.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 10:48:36 ERROR o.h.e.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-168] HikariPool-1 - Connection is not available, request timed out after 30000ms.
+2026-06-05 10:48:36 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-168] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction] with root cause
+java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:107)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:137)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:267)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:275)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:246)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:421)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:595)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:382)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy4/jdk.proxy4.$Proxy145.save(Unknown Source)
+	at org.springframework.samples.petclinic.owner.OwnerController.processCreationForm(OwnerController.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-05 11:07:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05 11:07:17 WARN  o.s.b.f.s.DisposableBeanAdapter [SpringApplicationShutdownHook] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de données est déjà fermée (pour désactiver la fermeture automatique à l'arrêt de la VM, ajoutez "; DB_CLOSE_ON_EXIT = FALSE" à l'URL db)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
