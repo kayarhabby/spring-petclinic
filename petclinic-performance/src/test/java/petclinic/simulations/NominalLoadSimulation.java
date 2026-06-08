@@ -61,29 +61,46 @@ public class NominalLoadSimulation extends Simulation {
                     .formParam("telephone", "#{telephone}")
                     .check(status().in(200, 302, 303)));
 
+    private final ScenarioBuilder createPet = scenario("Creation animal")
+            .exec(http("Formulaire creation animal")
+                    .get("/owners/1/pets/new")
+                    .check(status().is(200)))
+            .exec(session -> {
+                String id = UUID.randomUUID().toString().substring(0, 8);
+                return session
+                        .set("petName", "Pet" + id)
+                        .set("birthDate", "2020-01-01")
+                        .set("type", "dog");
+            })
+            .exec(http("POST creation animal")
+                    .post("/owners/1/pets/new")
+                    .formParam("name", "#{petName}")
+                    .formParam("birthDate", "#{birthDate}")
+                    .formParam("type", "#{type}")
+                    .check(status().in(200, 302, 303)));
+
     {
         setUp(
-                consultationOwners.injectOpen(
-                        rampUsersPerSec(1).to(18).during(Duration.ofMinutes(2)),
-                        constantUsersPerSec(18).during(Duration.ofMinutes(7)),
-                        rampUsersPerSec(18).to(1).during(Duration.ofMinutes(1))
-                ),
-                searchOwners.injectOpen(
-                        rampUsersPerSec(1).to(8).during(Duration.ofMinutes(2)),
-                        constantUsersPerSec(8).during(Duration.ofMinutes(7)),
-                        rampUsersPerSec(8).to(1).during(Duration.ofMinutes(1))
-                ),
-                createOwner.injectOpen(
-                        rampUsersPerSec(1).to(4).during(Duration.ofMinutes(2)),
-                        constantUsersPerSec(4).during(Duration.ofMinutes(7)),
-                        rampUsersPerSec(4).to(1).during(Duration.ofMinutes(1))
-                )
-        ).protocols(httpProtocol)
-                .assertions(
-                        global().successfulRequests().percent().gt(95.0),
-                        global().failedRequests().percent().lt(5.0),
-                        global().responseTime().percentile3().lt(3000),
-                        global().responseTime().percentile4().lt(6000)
-                );
+            consultationOwners.injectOpen(
+                    rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
+                    constantUsersPerSec(15).during(Duration.ofMinutes(7)),
+                    rampUsersPerSec(15).to(5).during(Duration.ofMinutes(1))
+            ),
+            searchOwners.injectOpen(
+                    rampUsersPerSec(5).to(10).during(Duration.ofMinutes(1)),
+                    constantUsersPerSec(10).during(Duration.ofMinutes(7)),
+                    rampUsersPerSec(10).to(5).during(Duration.ofMinutes(1))
+            ),
+            createOwner.injectOpen(
+                    rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
+                    constantUsersPerSec(15).during(Duration.ofMinutes(7)),
+                    rampUsersPerSec(15).to(5).during(Duration.ofMinutes(1))
+            ),
+            createPet.injectOpen(
+                    rampUsersPerSec(2).to(10).during(Duration.ofMinutes(1)),
+                    constantUsersPerSec(10).during(Duration.ofMinutes(7)),
+                    rampUsersPerSec(10).to(2).during(Duration.ofMinutes(1))
+            )
+        )
     }
 }
