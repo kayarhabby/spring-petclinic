@@ -81,26 +81,32 @@ public class NominalLoadSimulation extends Simulation {
 
     {
         setUp(
-            consultationOwners.injectOpen(
-                    rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
-                    constantUsersPerSec(15).during(Duration.ofMinutes(7)),
-                    rampUsersPerSec(15).to(5).during(Duration.ofMinutes(1))
-            ),
-            searchOwners.injectOpen(
-                    rampUsersPerSec(5).to(10).during(Duration.ofMinutes(1)),
-                    constantUsersPerSec(10).during(Duration.ofMinutes(7)),
-                    rampUsersPerSec(10).to(5).during(Duration.ofMinutes(1))
-            ),
-            createOwner.injectOpen(
-                    rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
-                    constantUsersPerSec(15).during(Duration.ofMinutes(7)),
-                    rampUsersPerSec(15).to(5).during(Duration.ofMinutes(1))
-            ),
-            createPet.injectOpen(
-                    rampUsersPerSec(2).to(10).during(Duration.ofMinutes(1)),
-                    constantUsersPerSec(10).during(Duration.ofMinutes(7)),
-                    rampUsersPerSec(10).to(2).during(Duration.ofMinutes(1))
-            )
-        )
+                consultationOwners.injectOpen(
+                        rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(15).during(Duration.ofMinutes(7)),
+                        rampUsersPerSec(15).to(5).during(Duration.ofMinutes(1))
+                ),
+                searchOwners.injectOpen(
+                        rampUsersPerSec(5).to(10).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(10).during(Duration.ofMinutes(7)),
+                        rampUsersPerSec(10).to(5).during(Duration.ofMinutes(1))
+                ),
+                createOwner.injectOpen(
+                        rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(15).during(Duration.ofMinutes(7)),
+                        rampUsersPerSec(15).to(5).during(Duration.ofMinutes(1))
+                ),
+                createPet.injectOpen(
+                        rampUsersPerSec(2).to(10).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(10).during(Duration.ofMinutes(7)),
+                        rampUsersPerSec(10).to(2).during(Duration.ofMinutes(1))
+                )
+        ).protocols(httpProtocol)
+                .assertions(
+                        global().successfulRequests().percent().gt(95.0),
+                        global().failedRequests().percent().lt(5.0),
+                        global().responseTime().percentile3().lt(3000),
+                        global().responseTime().percentile4().lt(6000)
+                );
     }
 }
