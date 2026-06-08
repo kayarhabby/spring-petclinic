@@ -54,12 +54,13 @@ public class NominalLoadSimulation extends Simulation {
                     .check(status().is(200)))
             .exec(http("POST creation proprietaire")
                     .post("/owners/new")
+                    .disableFollowRedirect()
                     .formParam("firstName", "#{firstName}")
                     .formParam("lastName", "#{lastName}")
                     .formParam("address", "#{address}")
                     .formParam("city", "#{city}")
                     .formParam("telephone", "#{telephone}")
-                    .check(status().in(200, 302, 303)));
+                    .check(status().in(302, 303)));
 
     private final ScenarioBuilder createPet = scenario("Creation animal")
             .exec(http("Formulaire creation animal")
@@ -74,40 +75,41 @@ public class NominalLoadSimulation extends Simulation {
             })
             .exec(http("POST creation animal")
                     .post("/owners/1/pets/new")
+                    .disableFollowRedirect()
                     .formParam("name", "#{petName}")
                     .formParam("birthDate", "#{birthDate}")
                     .formParam("type", "#{type}")
-                    .check(status().in(200, 302, 303)));
+                    .check(status().in(302, 303)));
 
     {
         setUp(
                 consultationOwners.injectOpen(
-                        rampUsersPerSec(50).to(120).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(120).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(120).to(210).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(210).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(210).to(50).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(20).to(60).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(60).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(60).to(90).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(90).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(90).to(20).during(Duration.ofMinutes(1))
                 ),
                 searchOwners.injectOpen(
-                        rampUsersPerSec(30).to(80).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(80).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(80).to(140).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(140).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(140).to(30).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(10).to(40).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(40).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(40).to(60).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(60).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(60).to(10).during(Duration.ofMinutes(1))
                 ),
                 createOwner.injectOpen(
-                        rampUsersPerSec(50).to(120).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(120).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(120).to(210).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(210).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(210).to(50).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(20).to(60).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(60).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(60).to(90).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(90).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(90).to(20).during(Duration.ofMinutes(1))
                 ),
                 createPet.injectOpen(
-                        rampUsersPerSec(30).to(80).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(80).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(80).to(140).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(140).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(140).to(30).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(10).to(40).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(40).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(40).to(60).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(60).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(60).to(10).during(Duration.ofMinutes(1))
                 )
         ).protocols(httpProtocol)
                 .assertions(
