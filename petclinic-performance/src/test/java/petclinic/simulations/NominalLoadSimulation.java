@@ -13,8 +13,7 @@ public class NominalLoadSimulation extends Simulation {
 
     private final HttpProtocolBuilder httpProtocol = http
             .baseUrl(System.getProperty("baseUrl", "http://localhost:8080"))
-            .requestTimeout(Duration.ofSeconds(15))
-            .connectTimeout(Duration.ofSeconds(5))
+            .responseTimeout(Duration.ofSeconds(15))
             .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
             .acceptLanguageHeader("fr-FR,fr;q=0.9,en;q=0.8")
             .userAgentHeader("Gatling Petclinic Nominal Load Test");
