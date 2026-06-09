@@ -18,26 +18,28 @@ public class NominalLoadSimulation extends Simulation {
             .userAgentHeader("Gatling Petclinic Nominal Load Test");
 
     private final ScenarioBuilder consultationOwners = scenario("Consultation proprietaires")
-            .exec(http("Accueil")
-                    .get("/")
-                    .check(status().is(200)))
-            .exec(http("Page recherche proprietaires")
-                    .get("/owners/find")
-                    .check(status().is(200)))
-            .exec(http("Liste proprietaires")
-                    .get("/owners?lastName=")
-                    .check(status().is(200)))
-            .exec(http("Liste veterinaires")
-                    .get("/vets.html")
-                    .check(status().in(200, 301, 302)));
+            .exec(http("Accueil").get("/").check(status().is(200)))
+            .exec(http("Page recherche proprietaires").get("/owners/find").check(status().is(200)))
+            .exec(http("Liste proprietaires").get("/owners?lastName=").check(status().is(200)))
+            .exec(http("Liste veterinaires").get("/vets.html").check(status().in(200, 301, 302)));
 
     private final ScenarioBuilder searchOwners = scenario("Recherche proprietaire")
-            .exec(http("Page recherche proprietaire")
-                    .get("/owners/find")
-                    .check(status().is(200)))
-            .exec(http("Recherche Davis")
-                    .get("/owners?lastName=Davis")
-                    .check(status().in(200, 302)));
+            .exec(http("Page recherche proprietaire").get("/owners/find").check(status().is(200)))
+            .exec(http("Recherche Davis").get("/owners?lastName=Davis").check(status().in(200, 302)))
+            .exec(http("Recherche vide").get("/owners?lastName=").check(status().is(200)));
+
+    private final ScenarioBuilder readPages = scenario("Lectures pages")
+            .exec(http("Accueil lecture").get("/").check(status().is(200)))
+            .exec(http("Veterinaires lecture").get("/vets.html").check(status().in(200, 301, 302)))
+            .exec(http("Recherche owners lecture").get("/owners/find").check(status().is(200)))
+            .exec(http("Liste owners lecture").get("/owners?lastName=").check(status().is(200)));
+
+    private final ScenarioBuilder readOwnersDetails = scenario("Lecture details proprietaires")
+            .exec(http("Owner 1").get("/owners/1").check(status().is(200)))
+            .exec(http("Owner 2").get("/owners/2").check(status().is(200)))
+            .exec(http("Owner 3").get("/owners/3").check(status().is(200)))
+            .exec(http("Owner 4").get("/owners/4").check(status().is(200)))
+            .exec(http("Owner 5").get("/owners/5").check(status().is(200)));
 
     private final ScenarioBuilder createOwner = scenario("Creation proprietaire")
             .exec(session -> {
@@ -62,54 +64,42 @@ public class NominalLoadSimulation extends Simulation {
                     .formParam("telephone", "#{telephone}")
                     .check(status().in(302, 303)));
 
-    private final ScenarioBuilder createPet = scenario("Creation animal")
-            .exec(http("Formulaire creation animal")
-                    .get("/owners/1/pets/new")
-                    .check(status().is(200)))
-            .exec(session -> {
-                String id = UUID.randomUUID().toString().substring(0, 8);
-                return session
-                        .set("petName", "Pet" + id)
-                        .set("birthDate", "2020-01-01")
-                        .set("type", "dog");
-            })
-            .exec(http("POST creation animal")
-                    .post("/owners/1/pets/new")
-                    .disableFollowRedirect()
-                    .formParam("name", "#{petName}")
-                    .formParam("birthDate", "#{birthDate}")
-                    .formParam("type", "#{type}")
-                    .check(status().in(302, 303)));
-
     {
         setUp(
                 consultationOwners.injectOpen(
-                        rampUsersPerSec(5).to(20).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(20).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(20).to(30).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(30).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(30).to(5).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(10).to(40).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(40).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(40).to(70).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(70).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(70).to(10).during(Duration.ofMinutes(1))
                 ),
                 searchOwners.injectOpen(
-                        rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(15).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(15).to(20).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(20).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(20).to(5).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(10).to(35).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(35).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(35).to(60).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(60).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(60).to(10).during(Duration.ofMinutes(1))
+                ),
+                readPages.injectOpen(
+                        rampUsersPerSec(10).to(40).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(40).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(40).to(70).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(70).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(70).to(10).during(Duration.ofMinutes(1))
+                ),
+                readOwnersDetails.injectOpen(
+                        rampUsersPerSec(10).to(35).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(35).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(35).to(60).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(60).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(60).to(10).during(Duration.ofMinutes(1))
                 ),
                 createOwner.injectOpen(
                         rampUsersPerSec(5).to(20).during(Duration.ofMinutes(1)),
                         constantUsersPerSec(20).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(20).to(30).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(30).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(30).to(5).during(Duration.ofMinutes(1))
-                ),
-                createPet.injectOpen(
-                        rampUsersPerSec(5).to(15).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(15).during(Duration.ofMinutes(1)),
-                        rampUsersPerSec(15).to(20).during(Duration.ofMinutes(1)),
-                        constantUsersPerSec(20).during(Duration.ofMinutes(6)),
-                        rampUsersPerSec(20).to(5).during(Duration.ofMinutes(1))
+                        rampUsersPerSec(20).to(40).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(40).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(40).to(5).during(Duration.ofMinutes(1))
                 )
         ).protocols(httpProtocol)
                 .assertions(
