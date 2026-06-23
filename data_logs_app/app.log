@@ -1,97 +1,13 @@
-2026-02-10 08:25:44 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-02-10 08:25:44 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-02-10 08:25:46 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-10 08:25:46 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 103 ms. Found 2 JPA repository interfaces.
-2026-02-10 08:25:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-02-10 08:25:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3612 ms
-2026-02-10 08:25:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-10 08:25:55 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-02-10 08:25:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-02-10 08:25:55 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 11.719 seconds (process running for 13.156)
-2026-02-10 08:31:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-10 08:31:46 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-02-10 08:31:46 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-02-10 08:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-10 08:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
-2026-02-10 08:31:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-02-10 08:31:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1742 ms
-2026-02-10 08:31:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-10 08:31:51 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-02-10 08:31:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-02-10 08:31:52 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 5.702 seconds (process running for 6.643)
-2026-02-10 08:32:01 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2026-02-10 08:32:01 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2026-02-10 08:35:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-10 08:41:34 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-02-10 08:41:34 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-02-10 08:41:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-10 08:41:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
-2026-02-10 08:41:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-02-10 08:41:36 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1862 ms
-2026-02-10 08:41:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-10 08:41:40 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-02-10 08:41:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-02-10 08:41:40 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 6.473 seconds (process running for 7.518)
-2026-02-10 08:42:06 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2026-02-10 08:42:06 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
-2026-02-10 08:42:42 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:35:06 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-06-04 11:35:06 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-06-04 11:35:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04 11:35:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
-2026-06-04 11:35:07 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-06-04 11:35:07 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1457 ms
-2026-06-04 11:35:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:35:10 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-06-04 11:35:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-06-04 11:35:10 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 4.545 seconds (process running for 5.106)
-2026-06-04 11:37:19 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2026-06-04 11:37:19 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2026-06-04 11:37:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:40:34 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-06-04 11:40:34 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-06-04 11:40:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04 11:40:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
-2026-06-04 11:40:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-06-04 11:40:36 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1307 ms
-2026-06-04 11:40:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:40:38 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-06-04 11:40:38 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-06-04 11:40:38 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 4.131 seconds (process running for 4.603)
-2026-06-04 11:41:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:42:27 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-06-04 11:42:27 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-06-04 11:42:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04 11:42:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
-2026-06-04 11:42:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-06-04 11:42:28 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1365 ms
-2026-06-04 11:42:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:42:31 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-06-04 11:42:31 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-06-04 11:42:31 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 4.263 seconds (process running for 4.663)
-2026-06-04 11:45:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:45:47 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
-2026-06-04 11:45:47 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-06-04 11:45:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-04 11:45:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
-2026-06-04 11:45:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-06-04 11:45:48 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1294 ms
-2026-06-04 11:45:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-04 11:45:51 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-06-04 11:45:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-06-04 11:45:51 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 4.08 seconds (process running for 4.507)
-2026-06-04 11:45:52 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2026-06-04 11:45:52 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2026-06-08 09:47:06 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.19 with PID 1 (/app/app.jar started by root in /app)
-2026-06-08 09:47:06 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
-2026-06-08 09:47:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-08 09:47:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
-2026-06-08 09:47:08 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2026-06-08 09:47:08 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1948 ms
-2026-06-08 09:47:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-08 09:47:12 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
-2026-06-08 09:47:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2026-06-08 09:47:12 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 6.631 seconds (process running for 7.345)
-2026-06-08 09:47:21 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2026-06-08 09:47:21 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
-2026-06-08 09:47:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23 08:39:15 INFO  o.s.s.petclinic.PetClinicApplication [main] Starting PetClinicApplication v3.0.0 using Java 17.0.19 with PID 1 (/app/app.jar started by root in /app)
+2026-06-23 08:39:15 INFO  o.s.s.petclinic.PetClinicApplication [main] The following 1 profile is active: "mysql"
+2026-06-23 08:39:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-23 08:39:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2026-06-23 08:39:18 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2026-06-23 08:39:18 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2255 ms
+2026-06-23 08:39:21 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23 08:39:23 INFO  o.s.b.a.e.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2026-06-23 08:39:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2026-06-23 08:39:23 INFO  o.s.s.petclinic.PetClinicApplication [main] Started PetClinicApplication in 8.018 seconds (process running for 8.975)
+2026-06-23 08:39:29 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2026-06-23 08:39:29 INFO  o.s.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2026-06-23 08:39:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
