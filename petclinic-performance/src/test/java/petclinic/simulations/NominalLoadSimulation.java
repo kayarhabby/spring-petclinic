@@ -44,6 +44,7 @@ public class NominalLoadSimulation extends Simulation {
     private final ScenarioBuilder createOwner = scenario("Creation proprietaire")
             .exec(session -> {
                 String id = UUID.randomUUID().toString().substring(0, 8);
+
                 return session
                         .set("firstName", "Test" + id)
                         .set("lastName", "Gatling" + id)
@@ -62,6 +63,28 @@ public class NominalLoadSimulation extends Simulation {
                     .formParam("address", "#{address}")
                     .formParam("city", "#{city}")
                     .formParam("telephone", "#{telephone}")
+                    .check(status().in(302, 303)));
+
+    private final ScenarioBuilder createPet = scenario("Creation animal")
+            .exec(session -> {
+                int ownerId = 1 + (int) (Math.random() * 5);
+                String id = UUID.randomUUID().toString().substring(0, 8);
+
+                return session
+                        .set("ownerId", ownerId)
+                        .set("petName", "Pet" + id)
+                        .set("birthDate", "2024-01-01")
+                        .set("type", "dog");
+            })
+            .exec(http("Formulaire creation animal")
+                    .get("/owners/#{ownerId}/pets/new")
+                    .check(status().is(200)))
+            .exec(http("POST creation animal")
+                    .post("/owners/#{ownerId}/pets/new")
+                    .disableFollowRedirect()
+                    .formParam("name", "#{petName}")
+                    .formParam("birthDate", "#{birthDate}")
+                    .formParam("type", "#{type}")
                     .check(status().in(302, 303)));
 
     {
@@ -95,6 +118,13 @@ public class NominalLoadSimulation extends Simulation {
                         rampUsersPerSec(60).to(10).during(Duration.ofMinutes(1))
                 ),
                 createOwner.injectOpen(
+                        rampUsersPerSec(5).to(20).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(20).during(Duration.ofMinutes(1)),
+                        rampUsersPerSec(20).to(40).during(Duration.ofMinutes(1)),
+                        constantUsersPerSec(40).during(Duration.ofMinutes(6)),
+                        rampUsersPerSec(40).to(5).during(Duration.ofMinutes(1))
+                ),
+                createPet.injectOpen(
                         rampUsersPerSec(5).to(20).during(Duration.ofMinutes(1)),
                         constantUsersPerSec(20).during(Duration.ofMinutes(1)),
                         rampUsersPerSec(20).to(40).during(Duration.ofMinutes(1)),
